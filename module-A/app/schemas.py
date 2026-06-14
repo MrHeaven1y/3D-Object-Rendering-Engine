@@ -1,14 +1,11 @@
-from pydantic import BaseModel, Field, conint
+from pydantic import BaseModel, Field
 from typing import Dict, Any, Optional
-
-StepsType = conint(ge=1, le=10000)
-ComplexityType = conint(ge=1, le=10)
 
 
 class SimulationConfig(BaseModel):
         name: str = Field(..., description="Human-friendly name")
-        steps: StepsType = 100
-        complexity: ComplexityType = 3
+        steps: int = Field(100, ge=1, le=10000)
+        complexity: int = Field(3, ge=1, le=10)
         params: Dict[str, Any] = {}
 
 class StartResponse(BaseModel):
