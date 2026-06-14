@@ -10,7 +10,7 @@ do
         -e delete \
         -e move \
         . \
-        --exclude '(\.git|__pycache__|watcher\.log|build|dist|bin|\.o$)'
+        --exclude '(\.git|__pycache__|watcher\.log|build|dist|bin|\.o$)')
 
     echo "Detected: $EVENT"
 
