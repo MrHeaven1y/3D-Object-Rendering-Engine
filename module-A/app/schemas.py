@@ -22,4 +22,4 @@ class StatusResponse(BaseModel):
 
 class ResultResponse(BaseModel):
     run_id: str
-    resutl: Dict[str, Any]
+    result: Dict[str, Any]
