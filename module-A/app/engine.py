@@ -55,4 +55,4 @@ class SimulationEngine:
                 "summary": f"Completed {steps} steps with complexity {complexity}"
             }
 
-            return result
+        return result
